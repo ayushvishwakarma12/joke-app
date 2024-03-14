@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+/* Login page */
+
+.login-page {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-details {
+  position: absolute;
+  top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form {
+  background-color: $blue-500;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-heading {
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+/* Home */
+
+.home {
+  background-color: #004fb0;
+  height: 100vh;
+  padding: 20px;
+}
+
+.joke {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.joke-table-container {
+  border-radius: 20px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
 }
